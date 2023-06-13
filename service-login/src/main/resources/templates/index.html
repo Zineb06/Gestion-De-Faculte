@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSTBM</title>
+    
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- link google font -->
     <link  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
     <!-- link font awesome  -->
@@ -41,7 +43,7 @@
         <div class="content">
             <h1>faculté des sciences et techniques</h1>
             <p>beneficiez des services de la faculté des sciences et techniques de beni mellal</p>
-            <a href="#" ><button>Login</button></a>
+            <a href="#" ><button>Log-out</button></a>
         </div>
        
         <div class="box-container">
@@ -49,22 +51,22 @@
             <div class="box">
                 <i class="fas fa-user-tie"></i>
                 <h3>Gestion des Professeurs</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                <button id ="botona" class="botona"><a th:href="@{/service-professeurs/professeurs}" style="color:black;" >accéder</a></button> 
             </div>
             <div class="box">
                 <i class="fas fa-list"></i>
                 <h3>gestion des filières</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                <button id ="botona" class="botona"><a style="color:black;" >accéder</a></button> 
             </div>
             <div class="box">
                 <i class="fas fa-book"></i>
                 <h3>gestion des cours</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                <button id ="botona" class="botona"><a style="color:black;" >accéder</a></button> 
             </div>
             <div class="box">
                 <i class="fas fa-regular fa-clipboard-check"></i>
                 <h3>gestion des notes</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                <button id ="botona" class="botona"><a style="color:black;" >accéder</a></button> 
             </div>
         </div>
     </section>

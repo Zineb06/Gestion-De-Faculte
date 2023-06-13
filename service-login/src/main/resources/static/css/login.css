@@ -35,7 +35,7 @@
   
   .img-left {
     width: 55%;
-    background: url('images/login.jpg') center;
+    background: url('login.jpg') center;
     background-size: cover;
     transition: all .2s ease-out
   }
@@ -91,7 +91,7 @@
     border: 0px;
   }
   
-  .form-box button[type="submit"] {
+  .form-box button {
     margin-top: 10px;
     border: none;
     cursor: pointer;
@@ -105,7 +105,12 @@
     padding: 12px;
   }
   
-  .form-box button[type="submit"]:hover {
+ .form-box button a {
+  color: #fff;
+ text-decoration : none;
+ }
+  
+  .form-box button:hover {
     background: rgb(21, 124, 209);
   }
   
