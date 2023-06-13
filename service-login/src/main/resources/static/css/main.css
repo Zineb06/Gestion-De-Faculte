@@ -138,12 +138,34 @@ header .fa-times {
     height:4rem; 
     width:20rem; 
     border-radius: 5rem;
-    background: lightseagreen;
+    background:lightseagreen;
     font-size:2rem;
     color:#fff; 
     cursor:pointer;
     box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
 }
+
+#botona{
+	 height:4rem; 
+    width:20rem; 
+    border-radius: 5rem;
+    background: rgb(55, 255, 245);
+    font-size:2rem;
+    color:#000; 
+    cursor:pointer;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+    text-decoration:none;
+}
+
+#botona:hover{
+	 letter-spacing: .2rem;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,.3);
+    background: rgb(55, 255, 245);
+}
+
+#botona a{text-decoration:none;}
+
+
 .home .content button:hover {
     letter-spacing: .2rem;
     box-shadow: 0 2rem 2rem rgba(0,0,0,.3);

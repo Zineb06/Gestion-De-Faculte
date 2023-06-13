@@ -32,6 +32,14 @@ spring:
           filters:
           - StripPrefix=1
           
+            #service des login : 
+        - id: service-login
+          uri: lb://service-login
+          predicates:
+          - Path=/service-login/**
+          filters:
+          - StripPrefix=1
+          
         
         
 server:
