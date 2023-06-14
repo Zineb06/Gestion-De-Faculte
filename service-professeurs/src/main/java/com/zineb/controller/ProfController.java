@@ -33,6 +33,11 @@ public class ProfController {
 		return new ModelAndView("redirect:/professeurs");
 	}
 	
+//	@GetMapping("/homepage")
+//	public ModelAndView showHome() {
+//		return new ModelAndView("redirect:service-login/index");
+//	}
+//	
 	@PostMapping("/saveProf")
 	public ModelAndView addProf(@ModelAttribute Professeur p, RedirectAttributes ra) {
 		service.save(p);
@@ -55,7 +60,7 @@ public class ProfController {
 		return new ModelAndView("editForm");
 	}
 	
-	@PostMapping("/service-professeurs/searchProf")
+	@PostMapping("/searchProf")
 	public ModelAndView searchProf(@ModelAttribute("search") Professeur p, Model model) {
 		int id = p.getId();
 		Professeur prof = service.getProfById(id);

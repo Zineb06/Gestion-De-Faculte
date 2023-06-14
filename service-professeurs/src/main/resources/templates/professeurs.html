@@ -268,10 +268,10 @@ $(document).ready(function(){
 
 <nav class="navbar navbar-light bg-dark">
   <form class="form-inline">
-    <button class="btn  btn-success my-2 mx-3"type="button"><a th:href="@{/service-login/index}" style="text-decoration:none; color:#fff;">Home Page</a></button>
+    <button class="btn  btn-success my-2 mx-3"type="button"><a th:href="@{http://localhost:8080/service-login/index}" style="text-decoration:none; color:#fff;">Home Page</a></button>
     <button class="btn btn-outline-success my-2 mx-3"  type="button">Se déconnecter</button>
   </form>
-  <form class="form-inline my-2 my-lg-0" th:action="@{/service-professeurs/searchProf}" method="post">
+  <form class="form-inline my-2 my-lg-0" th:action="@{/searchProf}" method="post">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
