@@ -55,7 +55,7 @@ public class ProfController {
 		return new ModelAndView("editForm");
 	}
 	
-	@PostMapping("/searchProf")
+	@PostMapping("/service-professeurs/searchProf")
 	public ModelAndView searchProf(@ModelAttribute("search") Professeur p, Model model) {
 		int id = p.getId();
 		Professeur prof = service.getProfById(id);
