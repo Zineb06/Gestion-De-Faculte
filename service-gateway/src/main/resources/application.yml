@@ -3,12 +3,12 @@ spring:
     name: service-gateway
 
     
-  ##Gatewat configuration : 
+  ##Gateway configuration : 
 
   cloud:
     gateway:
       routes:
-          
+
           #service des professeurs : 
         - id: service-professeurs
           uri: lb://service-professeurs
@@ -17,7 +17,7 @@ spring:
           filters:
           - StripPrefix=1
           
-            #service des login : 
+            #service de login : 
         - id: service-login
           uri: lb://service-login
           predicates:
