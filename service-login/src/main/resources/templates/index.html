@@ -21,7 +21,7 @@
     
     <!-- header section starts  -->
     <header class="header">
-        <a href="#" class="logo"><i class="fas fa-graduation-cap"></i> FSTBM </a>
+        <a href="#" class="logo"><img src="images/icon.png" height="45" width="35"> FSTBM </a>
 
         <nav class="navbar">
             <ul>
@@ -43,15 +43,16 @@
         <div class="content">
             <h1>faculté des sciences et techniques</h1>
             <p>beneficiez des services de la faculté des sciences et techniques de beni mellal</p>
-            <a href="#" ><button>Log-out</button></a>
-        </div>
+             <form class="form-box px-3" th:action="@{/logout}" method="post">
+				<button type="submit" class="btn btn-block text-uppercase"> Logout</button>      
+	  </div>
        
         <div class="box-container">
 
             <div class="box">
                 <i class="fas fa-user-tie"></i>
                 <h3>Gestion des Professeurs</h3>
-                <button id ="botona" class="botona"><a th:href="@{/service-professeurs/listprof}" style="color:black;" >accéder</a></button> 
+                <button id ="botona" class="botona"><a th:href="@{http://localhost:8088/professeurs}" style="color:black;" >accéder</a></button> 
             </div>
             <div class="box">
                 <i class="fas fa-list"></i>

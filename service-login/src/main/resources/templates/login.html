@@ -24,10 +24,10 @@
           </h4>
 
 
-          <form class="form-box px-3">
+          <form class="form-box px-3" th:action="@{/login}" method="post">
             <div class="form-input">
               <span><i class="fa fa-envelope-o"></i></span>
-              <input type="text" name="username" placeholder="Nom d'utilisateur" tabindex="10" required>
+              <input type="text"  name="username" placeholder="Nom d'utilisateur" tabindex="10" required>
             </div>
             <div class="form-input">
               <span><i class="fa fa-key"></i></span>
@@ -43,8 +43,7 @@
             </div>
 
             <div class="mb-3">
-              <button type="submit" class="btn btn-block text-uppercase">
-               <a th:href="@{/service-login/index}">Se connecter</a>
+              <button type="submit" class="btn btn-block text-uppercase"> Login
               </button>
             </div>
 
