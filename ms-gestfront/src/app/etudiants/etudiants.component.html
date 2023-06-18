@@ -3,20 +3,18 @@
 <html lang="en">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-            
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <nav  class="navbar navbar-light bg-dark">
+    <form class="form-inline">
+      <!-- Links -->
+          <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090/index" >HomePage</a></button>
+
+           <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="/" >Liste Des Filieres</a></button>
+
+           <button   class="btn  btn-outline-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090" >Logout</a></button>
+  </form>
+    </nav>
     <!--Main Content-->
- 
+
     <div class="mt-5">
         <h1 class="text-center">Liste des etudiants</h1>
         </div>
@@ -24,10 +22,10 @@
           <form class="form-inline my-10 my-lg-8">
             <input  class="form-control mr-sm-2" type="text"  [(ngModel)]="searchTerm" (ngModelChange)="filterData()" placeholder="Rechercher...">
           </form>
-          
-        <br>  
+
+        <br>
             <!--Add User Button-->
-           
+
             <table class="table border" >
                 <thead>
                     <tr>
@@ -53,9 +51,9 @@
                         <td>{{ etudiant.numapp }}</td>
                         <td>{{ etudiant.niveau }}</td>
                         <td>{{ etudiant.filiere }}</td>
-                       
-                    
-                   
+
+
+
                             <td>
                             <div class="d-inline mx-1">
                                 <i class="fa-solid fa-pen-to-square"  style="color: rgb(64, 0, 255)" type="button" (click)="updatetudiant(etudiant.id)"></i>
@@ -66,17 +64,17 @@
                             <div class="d-inline   mx-1">
                               <i class="fa-solid fa-download"  style="color: rgb(0, 255, 21) "type="button" (click)="exporterEnPDF(etudiant)"></i>
                             </div>  </td>
-                      
-                          
-                      </tr>  
-                     
-                      
+
+
+                      </tr>
+
+
                 </tbody>
               </table>
 
         </div>
-    
-    
+
+
 </body>
 </html>
 

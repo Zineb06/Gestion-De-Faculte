@@ -1,19 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-        
-        </ul>
-      </div>
-    </div>
+<nav  class="navbar navbar-light bg-dark">
+  <form class="form-inline">
+    <!-- Links -->
+        <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090/index" >HomePage</a></button>
+
+         <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="/" >Liste Des Filieres</a></button>
+
+         <button   class="btn  btn-outline-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090" >Logout</a></button>
+</form>
   </nav>
 <div class="col-md-6 offset-md-3">
     <h3> Add filiere</h3>
     <form  [formGroup]="form" (ngSubmit)="submit()">
-    
+
         <div class="form-group">
             <label for="firstName">Nom</label>
             <input type="text" class="form-control" id="nom" formControlName="nom">
@@ -23,7 +21,7 @@
         <div class="form-group">
             <label> Description</label>
             <input type="text" class ="form-control" id = "description"  formControlName="description">
-          
+
         </div>
         <div class="form-group">
           <label for="niveau">Type</label>
@@ -31,23 +29,23 @@
               <option value="">-- Sélectionner --</option>
               <option value="Initiale">Initiale</option>
               <option value="Continue">Continue</option>
-              
+
           </select>
           </div>
-    
+
         <div class="form-group">
           <label> Date_Ouverture</label>
           <input type="date" class ="form-control" id = "date_Ouverture"  formControlName="date_Ouverture">
-        
+
       </div>
 
       <div class="form-group">
         <label> Département</label>
         <input type="text" class ="form-control" id = "departement"  formControlName="departement">
-      
+
     </div>
 
         <button class = "btn btn-success" type ="submit">Ajouter</button>
-    
+
     </form>
-    </div> 
+    </div>
