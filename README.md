@@ -4,3 +4,5 @@
 <li>gateway port : 8080</li><br>
 <li>service-professeurs port : 8088</li><br>
 <li>service-login et homepage port : 8090</li><br>
+<li>service-cours port : 8091</li><br>
+<li>service-etudiants port : </li><br>
