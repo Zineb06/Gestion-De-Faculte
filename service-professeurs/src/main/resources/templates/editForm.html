@@ -21,7 +21,7 @@
 <nav class="navbar navbar-light bg-dark">
   <form class="form-inline">
     <a th:href="@{/listprof}"><button class="btn  btn-success my-2 mx-3"type="button">Liste des Professeurs</button></a>
-    <button class="btn btn-outline-success my-2 mx-3"  type="button">Se déconnecter</button>
+    <button class="btn btn-outline-success my-2 mx-3"  type="button"><a th:href="@{http://localhost:8090/}" style="text-decoration:none; color:#fff;"> Logout</a></button>
   </form>
 </nav>
 
@@ -33,7 +33,7 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card">
 					<div class="card-body">
-						<h4 class="text-center text-warning">Modifier Professeur</h4>
+						<h4 class="text-center text-danger">Modifier Professeur</h4>
 
 						<form th:action="@{/saveProf}" method="post" th:object="${user}">
 
@@ -66,8 +66,8 @@
 								</div>					
 							</div>
 							<div class="modal-footer">
-								<input type="reset" class="btn btn-outline-warning" data-dismiss="modal" value="Annuler">
-								<input type="submit" class="btn btn-warning" value="Valider">
+								<input type="reset" class="btn btn-outline-danger" data-dismiss="modal" value="Annuler">
+								<input type="submit" class="btn btn-danger" value="Valider">
 							</div>
 
 						</form>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    /*background-color: #3c87ff;*/
+}
+#text {
+    width: 50%;
+    height: 60%;
+    resize: none;
+    padding: 20px;
+    outline: 0;
+    margin-bottom: 25px;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+button {
+  display: inline-block;
+  padding: 1px 10px;
+  background-color: gray;
+  
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 70px;
+  
+}
+
+ /*pdf*/
+ .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;   
+    margin-bottom: 80px;
+ }
+ .logo img{
+ width: 190px;
+ font-weight: bold;
+ 
+ }
+ .elements{
+ margin-left: 25px;
+ }
+ .elements p{
+ margin-left:  25px;
+ font-size: 25px;
+ }
+ .generateurBtn{
+ display: flex;
+ }
+ .generateurBtn button{
+ padding: 10px;
+ }
+ .generateurBtn a{
+ text-align: center;
+ text-decoration: 0;
+ padding: 10px 30px;
+ margin-left: 20px;
+ }
+ .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #e5e5e5;
+}
+.btn {
+  display: inline-block;
+  padding: 1px 10px;
+  background-color: gray;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-left: 90px;
+}
+
+.btn:hover {
+  background-color: #23527c;
+}
+
+.btn:active {
+  background-color: #1d4669;
+}
+
+
+
+
+

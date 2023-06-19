@@ -33,6 +33,22 @@ spring:
           filters:
           - StripPrefix=1
           
+           #service des etudiants : 
+        - id: service-etudiants
+          uri: lb://service-etudiants
+          predicates:
+          - Path=/service-etudiants/**
+          filters:
+          - StripPrefix=1
+          
+           #service des notes : 
+        - id: service-notes
+          uri: lb://service-notes
+          predicates:
+          - Path=/service-notes/**
+          filters:
+          - StripPrefix=1
+          
         
         
 server:
