@@ -3,7 +3,7 @@ spring:
     name: service-gateway
 
     
-  ##Gatewat configuration : 
+  ##Gateway configuration : 
 
   cloud:
     gateway:
