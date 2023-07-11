@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/CSS/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF GENERATOR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="logo">
+  <img src="/logo/logo.jpg"> 
+  </div>
+   
+   <p th:if="${selectedSemester != null}"> <H2>Relever des notes  <td th:text="${selectedSemester}"></td></H2></p>  
+<div th:if="${notes != null}">
+
+<table class="table" table-striped table-hover>
+        <thead>
+            <tr>
+     
+      <th scope="col">nom_etudiant</th>
+      <th scope="col">nom_module</th>
+      <th scope="col">note</th>
+      <th scope="col">observation</th>
+      <th scope="col">semestre</th>
+       
+            </tr>
+        </thead>      
+  <tbody>
+    <tr th:each="n :${notes}">
+      <td th:text="${n.nomEtudiant}" ></td>
+      <td th:text="${n.nomModule}" ></td>
+      <td th:text="${n.note}"  ></td>
+      <td th:text="${n.observation}" ></td>
+      <td th:text="${n.semestre}" ></td>
+      
+    </tr> 
+    </table> 
+      </div>
+      <div>
+  <p id="somme-notes">Somme des notes:</p>
+  <p id="validation">Validation:</p>
+</div>
+    le doyenne de la faculté
+<script>
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var notes = document.querySelectorAll('td:nth-child(3)'); 
+    var somme = 0;
+
+    notes.forEach(function(note) {
+      var valeurNote = parseFloat(note.textContent); 
+      if (!isNaN(valeurNote)) {
+        somme += valeurNote; 
+      }
+    });
+
+    var sommeDivisee = somme / 6; 
+
+    var sommeNotesElement = document.getElementById('somme-notes');
+    sommeNotesElement.textContent = 'Moyenne   ' + sommeDivisee.toFixed(2); 
+    
+    var validationElement = document.getElementById('validation');
+    if (sommeDivisee > 10) {
+      validationElement.textContent = ' Valider'; 
+    } else {
+      validationElement.textContent = ' Non valider';
+    }
+  });
+</script>
+
+
+
+
+
+
+      <button onclick="generatePDF()">Télécharger le PDF</button>
+      
+      
+ 
+  
+    
+    <script>
+        function generatePDF() {
+            var today = new Date();
+            var dateString = today.toLocaleDateString();
+
+            var opt = {
+                margin:  0.5,
+                filename: 'mon_fichier.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            var content = document.body.innerHTML;
+            content += "<p>Date : " + dateString + "</p>";
+           
+            html2pdf().set(opt).from(content).save();
+        }
+
+        document.getElementById("date").textContent = new Date().toLocaleDateString(); 
+
+    </script>
+     
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <nav  class="navbar navbar-light bg-dark">
+    <form class="form-inline">
+      <!-- Links -->
+          <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090/index" >HomePage</a></button>
+
+           <button  class="btn  btn-info my-2 mx-3" style="padding: 0;"><a style="color:white; text-decoration: none;" class="nav-link" href="/add" >Ajouter Une Filiere</a></button>
+
+
+           <button   class="btn  btn-outline-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090" >Logout</a></button>
+  </form>
+    </nav>
+    <!--Main Content-->
+    <div class="mt-5">
+        <h1 class="text-center">Liste filieres</h1>
+        <div class="container">
+
+            <!--Add User Button-->
+            <div class="my-3">
+
+
+            </div>
+
+            <table class="table border" >
+                <thead>
+                  <tr>
+                    <th scope="col">Nom</th>
+                           <th scope="col">Description</th>
+                           <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let f of ListFilieres">
+                        <td>{{f.nom}}</td>
+                      <td>{{f.description}}</td>
+
+                        <td>
+                          <i ></i>
+                          <i class="fa-solid fa-plus" style="color: rgb(64, 0, 255)"  type="button" (click)="addetudiant(f.id)"></i>
+                        <div class="d-inline mx-2">
+                            <i class="fa-solid fa-pen-to-square" style="color: rgb(0, 255, 21)" (click)="updatefiliere(f.id)" type="button"></i>
+                        </div>
+                        <div class="d-inline">
+                          <i class="fa-solid fa-trash"  style="color: red" (click)="deletefiliere(f.id)" type="button"></i>
+                        </div>
+                    </td>
+                    <td><button class = "btn btn-info" (click)="getetudiant(f.id)">Groupe</button>
+                      <div class="d-inline mx-2">
+                          <button class = "btn btn-info" (click)=" showDetailsList(f)">Détails</button>
+                          <div *ngIf="f.showDetails" class="details">
+                            <ul>
+                                <li>Nom: {{f.nom}}</li>
+                                <li>Type: {{f.type}}</li>
+                                <li>Date d'ouverture: {{f.date_Ouverture}}</li>
+                                <li>Departement: {{f.departement}}</li>
+                            </ul>
+                        </div>
+                      </div>  </td>
+                      </tr>
+
+                </tbody>
+
+              </table>
+              </div></div>
+
+</body>
+</html>
+
+<router-outlet></router-outlet>
+
+
+
+
+

@@ -1,0 +1,53 @@
+<nav  class="navbar navbar-light bg-dark">
+  <form class="form-inline">
+    <!-- Links -->
+        <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090/index" >HomePage</a></button>
+
+         <button  class="btn  btn-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="/" >Liste Des Filieres</a></button>
+
+         <button   class="btn  btn-outline-success my-2 mx-3" style="padding: 0;" ><a style="color:white; text-decoration: none;" class="nav-link" href="http://localhost:8090" >Logout</a></button>
+</form>
+  </nav>
+<div class="col-md-6 offset-md-3">
+    <h3> Update filiere</h3>
+    <form  [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <label> Nom</label>
+            <input type="text" class ="form-control" id = "nom" formControlName="nom">
+
+        </div>
+
+        <div class="form-group">
+            <label> Description</label>
+            <input type="text" class ="form-control" id = "description" formControlName="description">
+
+        </div>
+        <div class="form-group">
+          <label> Date_Ouverture</label>
+          <input type="date" class ="form-control" id = "date_Ouverture"  formControlName="date_Ouverture">
+
+      </div>
+
+        <div class="form-group">
+          <label for="niveau">Type</label>
+          <select class="form-control" id="type" formControlName="type" formControlName="type">
+              <option value="">-- Sélectionner --</option>
+              <option value="Initiale">Initiale</option>
+              <option value="Continue">Continue</option>
+
+          </select>
+          </div>
+
+
+
+      <div class="form-group">
+        <label> Département</label>
+        <input type="text" class ="form-control" id = "departement"  formControlName="departement">
+
+    </div>
+
+        <button class = "btn btn-success" type ="submit">Modifier</button>
+
+    </form>
+    </div>
